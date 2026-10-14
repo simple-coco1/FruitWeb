@@ -1,0 +1,59 @@
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水果连连看</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="game">
+        <header class="topbar">
+            <div class="title-area">
+                <h1>🍉 水果连连看</h1>
+                <p id="status">点击两个相同的水果进行消除</p>
+            </div>
+
+            <div class="controls">
+                <button id="restartBtn">重新开始</button>
+                <button id="refreshBtn">刷新盘面</button>
+                <button id="soundBtn">音效：开</button>
+            </div>
+        </header>
+
+        <section class="info">
+            <div>剩余水果 <strong id="remaining">120</strong></div>
+            <div>游戏时间 <strong id="timer">00:00</strong></div>
+            <div>连击 <strong id="combo">0</strong></div>
+        </section>
+
+        <section class="content">
+            <div id="board" class="board"></div>
+
+            <aside class="ranking">
+                <h2>🏆 最佳纪录</h2>
+                <div class="best-time">
+                    <span>最快通关</span>
+                    <strong id="bestTime">--:--</strong>
+                </div>
+                <ol id="records"></ol>
+                <p class="ranking-note">纪录保存在当前浏览器中</p>
+            </aside>
+        </section>
+    </main>
+
+    <div id="victory" class="overlay hidden">
+        <div class="victory-card">
+            <div class="trophy">🏆</div>
+            <h2>恭喜通关！</h2>
+            <p>所有水果都消除啦！</p>
+            <p>本局用时：<strong id="finalTime">00:00</strong></p>
+            <button id="playAgainBtn">再玩一局</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
+```
